@@ -21,8 +21,8 @@ const ask = (id_session) => {
       terminal.close();
       return
     }
-    let result = await sendMessage(res, id_session);
-    let texts = result.result.output.generic;
+    const result = await sendMessage(res, id_session);
+    const texts = result.result.output.generic;
 
     console.log('Freddie: ', texts);
     ask(id_session);
@@ -30,8 +30,8 @@ const ask = (id_session) => {
 }
 
 const flujo = async () => {
-  let session = await crearSession();
-  let id_session = session.result.session_id;
+  const session = await crearSession();
+  const id_session = session.result.session_id;
   ask(id_session);
 };
 
