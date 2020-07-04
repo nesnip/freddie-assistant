@@ -24,7 +24,7 @@ const ask = (id_session) => {
     let result = await sendMessage(res, id_session);
     let texts = result.result.output.generic;
 
-    console.log('Watson: ', texts);
+    console.log('Freddie: ', texts);
     ask(id_session);
   });
 }
