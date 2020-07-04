@@ -22,13 +22,36 @@ const deleteSession = (id_session) => {
   });
 };
 
-const flujo = async () => {
+const sendMessage = (input, id_session) => {
+  return assistant.message({
+    assistantId: '1a363677-648b-41d6-9d5f-5c343fe1acb3',
+    sessionId: id_session,
+    input: {
+      'message_type': 'text',
+      'text': input,
+      }
+    });
+}
+
+module.exports = {
+  crearSession,
+  deleteSession,
+  sendMessage,
+}
+
+/* const flujo = async () => {
   let session = await crearSession();
   let id_session = session.result.session_id;
+  let result = await sendMessage('holi', id_session);
+  let texts = result.result.output.generic;
+  console.log(texts);
+  
   await deleteSession(id_session);
 };
 
-flujo();
+flujo(); */
+
+// df4df02e-9ef5-46ba-a345-07d7392ad029
 
 /* assistant.createSession({
   assistantId: '1a363677-648b-41d6-9d5f-5c343fe1acb3'
