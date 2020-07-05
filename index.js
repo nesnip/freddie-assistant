@@ -149,6 +149,6 @@ app.post('/', async (req, res) => {
   console.log(result); */
 });
 
-app.listen(3150 , () => {
+app.listen(process.env.PORT || 3150 , () => {
   console.log("Mi servidor esta ejecutando");
 });
