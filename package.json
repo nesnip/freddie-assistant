@@ -19,7 +19,7 @@
   "homepage": "https://github.com/nesnip/freddie-assistant#readme",
   "dependencies": {
     "adathink-sdk-bot": "0.0.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "ibm-watson": "^5.6.0"
   }
 }
